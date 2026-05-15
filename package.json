@@ -1,6 +1,7 @@
 {
   "name": "orbit-agent",
   "version": "0.1.0",
+  "description": "Standalone CLI agent. Original code, original voice, 8 tools. No platform lock-in.",
   "private": true,
   "type": "module",
   "bin": {
@@ -8,5 +9,14 @@
   },
   "scripts": {
     "start": "node ./src/cli.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgoapple/orbit-agent.git"
+  },
+  "keywords": ["ai", "cli", "agent", "deepseek", "terminal"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
