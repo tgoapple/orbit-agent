@@ -11,13 +11,46 @@ He reads. He writes. He runs commands. He plans. He learns.
 
 ### Cross-Platform
 
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
+Orbit runs anywhere **Node.js 18+** does. He's 100% native — zero dependencies.
 
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
+**macOS:**
+```bash
+brew install node       # if you don't have Node yet
+node -v                 # should be 18.x+
+p npm install
+git clone https://github.com/tgoapple/orbit-agent
+cd orbit-agent
+cp .env.example .env   # add your API key
+./orbit-agent          # or: node src/cli.mjs
+```
+
+**Linux (Ubuntu/Debian):**
+```bash
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs
+node -v                 # should be 18.x+
+npm install
+git clone https://github.com/tgoapple/orbit-agent
+cd orbit-agent
+cp .env.example .env   # add your API key
+node src/cli.mjs       # (no ./orbit-agent script on Linux)
+```
+
+**Windows (PowerShell):**
+```powershell
+# Install Node.js from https://nodejs.org (v18+)
+# Or with winget:
+winget install OpenJS.NodeJS.LTS
+
+node -v                 # should be 18.x+
+npm install
+git clone https://github.com/tgoapple/orbit-agent
+cd orbit-agent
+copy .env.example .env # add your API key
+node src/cli.mjs
+```
+
+> Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). If you have Node 18+, you have everything. No `npm install` needed (but doesn't hurt).
 
 
 ## 🚀 Quick Install (30 seconds)
