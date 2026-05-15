@@ -1,3 +1,4 @@
+Doesn't the read me keep repeating itself
 # 🪐 Orbit Agent
 
 **Standalone CLI agent. Original code. Original voice. Zero platform lock-in.**
@@ -78,17 +79,6 @@ That's it. You're talking to Orbit.
 
 ---
 
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-
-
 ## 🎮 How to Use
 
 ### Interactive Mode (default)
@@ -103,88 +93,6 @@ Just start typing. Orbit responds, remembers the conversation, and uses tools wh
 
 | Command | What it does |
 |---
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-|---
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
--|
-| `/memory` | Show saved memory |
-| `/sessions` | List all saved conversations |
-| `/switch trading` | Switch to a different session |
-| `/clear` | Clear the current session |
-| `/help` | Show available commands |
 
 ### One-Shot Mode
 
@@ -206,97 +114,12 @@ Keep different conversations separate:
 
 ---
 
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-
-
 ## 🧰 What Orbit Can Do
 
 ### Built-in Tools
 
 | Tool | What it does |
 |---
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-|---
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
--|
-| `read_file` | Read any text file in your workspace |
-| `write_file` | Create or overwrite files |
-| `list_files` | Browse directories |
-| `run_command` | Execute shell commands |
-| `communicate` | Send structured messages to an outbox |
-| `load_skill` | Load domain-specific knowledge on demand |
-| `supervise` | Run multi-step tasks (build, investigate, pipeline) |
-| `plan` | Create a structured plan before complex work |
 
 ### Example: Building something
 
@@ -318,17 +141,6 @@ Orbit: Let me load the Discord skill.
 ```
 
 ---
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-
 
 ## 📁 File Layout
 
@@ -353,173 +165,12 @@ orbit-agent/
 
 ---
 
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-
-
 ## 🔧 Configuration Reference
 
 All settings go in `.env` (copy from `.env.example`):
 
 | Variable | Required | Default | Description |
 |---
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
--|---
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
--|---
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-|---
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
----
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
--|
-| `OPENAI_API_KEY` | ✅ | — | Your API key |
-| `OPENAI_BASE_URL` | ❌ | `https://api.openai.com/v1` | API endpoint |
-| `OPENAI_MODEL` | ❌ | `deepseek-chat` | Model name |
-| `WORKSPACE_ROOT` | ❌ | `~/Desktop/` | Root for file tools |
-| `SKILL_DIR` | ❌ | `~/.openclaw/workspace/skills` | Skill library path |
-| `AGENT_NAME` | ❌ | `Orbit` | Name used in responses |
-| `AGENT_SESSION_NAME` | ❌ | `default` | Default session name |
 
 ### Provider Examples
 
@@ -548,17 +199,6 @@ OPENAI_MODEL=qwen2.5:7b
 ```
 
 ---
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-
 
 ## 🧠 Making Orbit Your Own
 
@@ -594,17 +234,6 @@ my-skills/
 
 ---
 
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-
-
 ## 💬 Telegram Bridge (Optional)
 
 Orbit can run as a Telegram bot. The bridge script (`orbit-telegram-bridge.mjs`) is not included in this repo, but the pattern is simple:
@@ -615,17 +244,6 @@ Orbit can run as a Telegram bot. The bridge script (`orbit-telegram-bridge.mjs`)
 
 ---
 
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-
-
 ## 📦 Dependencies
 
 Orbit has **one runtime dependency**: `node-fetch` (used only if running Node <18). Node 18+ uses the built-in `fetch`.
@@ -633,17 +251,6 @@ Orbit has **one runtime dependency**: `node-fetch` (used only if running Node <1
 Everything else is native Node.js — `fs`, `path`, `child_process`, `os`.
 
 ---
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-
 
 ## 🔒 Security Notes
 
@@ -653,33 +260,11 @@ Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `p
 
 ---
 
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-
-
 ## 📝 License
 
 MIT — do whatever you want with it. Make it yours.
 
 ---
-
-### Cross-Platform
-
-| OS | Status | Notes |
-|----|--------|-------|
-| macOS | ✅ Tested | Works out of the box |
-| Linux | ✅ Should work | Same Node.js APIs |
-| Windows | ⚠️ Minor tweaks | Use `node src/cli.mjs` instead of `./orbit-agent` |
-
-Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). No `npm install` needed. If you have Node 18+, you have everything Orbit needs.
-
 
 ## 🪐 What People Say
 
