@@ -110,6 +110,35 @@ Or the shorthand:
 
 That's it. You're talking to Orbit.
 
+### Daemon Mode (Optional — persistent, faster)
+
+For faster responses on subsequent messages, run Orbit as a persistent daemon:
+
+```bash
+node src/orbit-harness.mjs
+```
+
+This keeps Orbit in memory on TCP port 12999. Send messages via netcat:
+
+```bash
+echo 'Hello' | nc localhost 12999
+```
+
+**What it fixes:** No cold starts. Module imports, persona, and session stay loaded between messages.
+
+**Without daemon:** Every message loads everything from scratch (5-15s startup).
+**With daemon:** First message takes 5-15s, everything after is instant (1-2s).
+
+Custom port:
+```bash
+node src/orbit-harness.mjs --port 7899
+```
+
+Or via environment:
+```bash
+HARNESS_PORT=7899 node src/orbit-harness.mjs
+```
+
 ---
 
 ## 🎮 How to Use
