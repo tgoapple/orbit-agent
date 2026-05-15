@@ -1,0 +1,12 @@
+{
+  "name": "orbit-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "orbit-agent": "./src/cli.mjs"
+  },
+  "scripts": {
+    "start": "node ./src/cli.mjs"
+  }
+}
