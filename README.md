@@ -1,337 +1,115 @@
-Doesn't the read me keep repeating itself
 # 🪐 Orbit Agent
 
 **Standalone CLI agent. Original code. Original voice. Zero platform lock-in.**
 
-Orbit is a terminal-native AI agent built from scratch — no LangChain, no Semantic Kernel, no wrapper. Just Node.js, DeepSeek (or any OpenAI-compatible API), and a clean set of file/shell tools.
-
-He reads. He writes. He runs commands. He plans. He learns.
+Orbit is a terminal-native AI agent built from scratch — no LangChain, no Semantic Kernel, no wrapper. Just Node.js and a clean set of file/shell tools.
 
 ---
 
-### Cross-Platform
+## 🚀 Quick Install (Linux / macOS)
 
-Orbit runs anywhere **Node.js 18+** does. He's 100% native — zero dependencies.
+**One command. Free. No API key needed.**
 
-**macOS:**
 ```bash
-brew install node       # if you don't have Node yet
-node -v                 # should be 18.x+
-p npm install
-git clone https://github.com/tgoapple/orbit-agent
-cd orbit-agent
-cp .env.example .env   # add your API key
-./orbit-agent          # or: node src/cli.mjs
-```
-
-**Linux (Ubuntu/Debian):**
-```bash
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs
-node -v                 # should be 18.x+
-npm install
-git clone https://github.com/tgoapple/orbit-agent
-cd orbit-agent
-cp .env.example .env   # add your API key
-node src/cli.mjs       # (no ./orbit-agent script on Linux)
-```
-
-**Windows (PowerShell):**
-```powershell
-# Install Node.js from https://nodejs.org (v18+)
-# Or with winget:
-winget install OpenJS.NodeJS.LTS
-
-node -v                 # should be 18.x+
-npm install
-git clone https://github.com/tgoapple/orbit-agent
-cd orbit-agent
-copy .env.example .env # add your API key
+curl -fsSL https://raw.githubusercontent.com/tgoapple/orbit-agent/main/install.sh | bash
 node src/cli.mjs
 ```
 
-> Orbit uses **zero npm dependencies** — just Node.js built-in modules (`fs`, `path`, `child_process`, `os`, `readline`, `fetch`). If you have Node 18+, you have everything. No `npm install` needed (but doesn't hurt).
+This will:
+1. Install Node.js (if missing)
+2. Install Ollama (if missing)
+3. Download Orbit
+4. Pull **Qwen2.5:7b** — free, local, runs entirely on your machine
+5. Create a default `.env` — ready to go
 
+**That's it.** No API keys. No accounts. No cloud dependencies.
 
-## 🚀 Quick Install (30 seconds)
+---
 
-### Prerequisites
+## ⚙️ How It Works
 
-- **Node.js 18+** — check with `node -v`
-- **npm** — comes with Node.js
-- **An API key** — DeepSeek, OpenAI, OpenRouter, or any OpenAI-compatible provider
+You can run Orbit with either backend:
 
-### Step 1: Clone
+| Backend | Cost | API Key | Setup |
+|---------|------|---------|-------|
+| **Ollama** (default) | Free | None | `install.sh` does everything |
+| **DeepSeek / OpenAI** | Pay-per-token | Required | Set `MODEL_BACKEND=api` + your key in `.env` |
+
+### Ollama Mode (default — recommended for first use)
 
 ```bash
-git clone https://github.com/YOUR_USER/orbit-agent.git
 cd orbit-agent
+node src/cli.mjs
 ```
 
-### Step 2: Install dependencies
+Uses `qwen2.5:7b` locally. Runs offline. Unlimited usage.
 
-```bash
-npm install
+### API Mode (DeepSeek / OpenAI / OpenRouter)
+
+Edit `.env`:
+
+```
+MODEL_BACKEND=api
+OPENAI_API_KEY=sk-your-key-here
+OPENAI_BASE_URL=https://api.deepseek.com/v1    # or OpenAI / OpenRouter
+OPENAI_MODEL=deepseek-chat                      # or gpt-4o / claude
 ```
 
-### Step 3: Set up your API key
+Then run:
 
 ```bash
+node src/cli.mjs
+```
+
+---
+
+## Features
+
+| Feature | What It Does |
+|---------|-------------|
+| **Tools system** | Read, write, list files. Run shell commands. Plan complex tasks. |
+| **Skills library** | Load domain expertise on demand (skills/ folder) |
+| **Session system** | Persistent conversations saved as JSON. Save/load/resume. |
+| **Cross-platform** | Pure Node.js — runs on macOS, Linux, Windows |
+| **Zero npm deps** | Uses only `fs`, `path`, `child_process`, `readline` — built-ins only |
+| **Bridge ready** | Can communicate with other agents through `/tmp/agent-bridge.json` |
+
+---
+
+## Manual Setup
+
+If you prefer to set up manually:
+
+```bash
+git clone https://github.com/tgoapple/orbit-agent
+cd orbit-agent
 cp .env.example .env
-```
-
-Then edit `.env` with your API key. For DeepSeek (recommended — cheap, fast, good):
-
-```env
-OPENAI_API_KEY=sk-your-deepseek-key-here
-OPENAI_BASE_URL=https://api.deepseek.com/v1
-OPENAI_MODEL=deepseek-chat
-```
-
-For OpenAI:
-
-```env
-OPENAI_API_KEY=sk-your-openai-key-here
-OPENAI_BASE_URL=https://api.openai.com/v1
-OPENAI_MODEL=gpt-4o-mini
-```
-
-### Step 4: Run
-
-```bash
+# edit .env to configure
 node src/cli.mjs
 ```
 
-Or the shorthand:
+**Prerequisites:**
+- Node.js 18+
+- Ollama (for local mode) or an API key (for API mode)
 
-```bash
-./orbit-agent
+---
+
+## Commands
+
+Inside Orbit's chat:
+
 ```
-
-That's it. You're talking to Orbit.
-
-### Daemon Mode (Optional — persistent, faster)
-
-For faster responses on subsequent messages, run Orbit as a persistent daemon:
-
-```bash
-node src/orbit-harness.mjs
-```
-
-This keeps Orbit in memory on TCP port 12999. Send messages via netcat:
-
-```bash
-echo 'Hello' | nc localhost 12999
-```
-
-**What it fixes:** No cold starts. Module imports, persona, and session stay loaded between messages.
-
-**Without daemon:** Every message loads everything from scratch (5-15s startup).
-**With daemon:** First message takes 5-15s, everything after is instant (1-2s).
-
-Custom port:
-```bash
-node src/orbit-harness.mjs --port 7899
-```
-
-Or via environment:
-```bash
-HARNESS_PORT=7899 node src/orbit-harness.mjs
+/help       Show commands
+/history    Show recent turns
+/model      Show or change the active model
+/save       Save the current session
+/load       Load another session
+/reset      Clear the current session
+/exit       Quit
 ```
 
 ---
 
-## 🎮 How to Use
+## License
 
-### Interactive Mode (default)
-
-```bash
-./orbit-agent
-```
-
-Just start typing. Orbit responds, remembers the conversation, and uses tools when needed.
-
-**In-session commands:**
-
-| Command | What it does |
-|---
-
-### One-Shot Mode
-
-Single response, no persistence:
-
-```bash
-./orbit-agent --one-shot "What's on my Desktop?"
-```
-
-### Named Sessions
-
-Keep different conversations separate:
-
-```bash
-./orbit-agent --session coding
-./orbit-agent --session trading
-./orbit-agent --session personal
-```
-
----
-
-## 🧰 What Orbit Can Do
-
-### Built-in Tools
-
-| Tool | What it does |
-|---
-
-### Example: Building something
-
-```
-You: Build me a simple stopwatch HTML page on my Desktop
-Orbit: Let me plan that out and build it.
-       [uses plan tool, then supervise tool with write_file + open steps]
-       Done. Open at ~/Desktop/stopwatch.html. It's a clean CSS stopwatch
-       with lap functionality. Open it in your browser.
-```
-
-### Example: Using skills
-
-```
-You: I need help setting up a Discord bot
-Orbit: Let me load the Discord skill.
-       [uses load_skill("discord-skill")]
-       Got it. Here's what you need...
-```
-
----
-
-## 📁 File Layout
-
-```
-orbit-agent/
-├── src/
-│   ├── cli.mjs               # Main entry — interactive REPL + one-shot
-│   ├── tools.mjs              # All 8 tool implementations
-│   ├── config.mjs             # Env-based configuration loader
-│   ├── session-store.mjs      # Persistent JSON session storage
-│   └── openai-client.mjs      # OpenAI-compatible API client
-├── personas/
-│   └── default.md             # System prompt — who Orbit is
-├── data/
-│   ├── memory.md              # Long-term memory (read at startup, write to remember)
-│   └── sessions/              # Saved conversations (auto-managed)
-├── SOUL.md                    # Identity document — read this one first
-├── .env.example               # Copy to .env and add your API key
-├── package.json               # Dependencies (just node-fetch)
-└── README.md                  # You're here
-```
-
----
-
-## 🔧 Configuration Reference
-
-All settings go in `.env` (copy from `.env.example`):
-
-| Variable | Required | Default | Description |
-|---
-
-### Provider Examples
-
-**DeepSeek** (recommended — $0.14/M tokens):
-```env
-OPENAI_BASE_URL=https://api.deepseek.com/v1
-OPENAI_MODEL=deepseek-chat
-```
-
-**OpenAI**:
-```env
-OPENAI_BASE_URL=https://api.openai.com/v1
-OPENAI_MODEL=gpt-4o-mini
-```
-
-**OpenRouter**:
-```env
-OPENAI_BASE_URL=https://openrouter.ai/api/v1
-OPENAI_MODEL=openai/gpt-4o-mini
-```
-
-**Any local model** (Ollama, LocalAI, etc.):
-```env
-OPENAI_BASE_URL=http://localhost:11434/v1
-OPENAI_MODEL=qwen2.5:7b
-```
-
----
-
-## 🧠 Making Orbit Your Own
-
-### Change his personality
-
-Edit `personas/default.md` — this is his system prompt. Make him more formal, more technical, or completely different.
-
-### Change his soul
-
-Edit `SOUL.md` — this is his identity. The code stays the same, but who he *is* changes.
-
-### Change his workspace
-
-Set `WORKSPACE_ROOT` in `.env`:
-```env
-WORKSPACE_ROOT=~/Documents/Projects
-```
-
-### Add a skill library
-
-Orbit can load skills on demand. Set `SKILL_DIR` to a folder containing skill folders, each with a `SKILL.md` file.
-
-Want to create a skill? Just make a folder:
-```
-my-skills/
-├── trading/
-│   └── SKILL.md
-├── design/
-│   └── SKILL.md
-└── sysadmin/
-    └── SKILL.md
-```
-
----
-
-## 💬 Telegram Bridge (Optional)
-
-Orbit can run as a Telegram bot. The bridge script (`orbit-telegram-bridge.mjs`) is not included in this repo, but the pattern is simple:
-
-1. Create a bot with @BotFather on Telegram
-2. Write a 200-line polling script: get updates from Telegram → write to bridge JSON → read response → send back
-3. Run it as a background service
-
----
-
-## 📦 Dependencies
-
-Orbit has **one runtime dependency**: `node-fetch` (used only if running Node <18). Node 18+ uses the built-in `fetch`.
-
-Everything else is native Node.js — `fs`, `path`, `child_process`, `os`.
-
----
-
-## 🔒 Security Notes
-
-- Your API key lives in `.env` — this file is in `.gitignore` so it never gets pushed
-- File tools are scoped to `WORKSPACE_ROOT` — Orbit can't escape it
-- All data stays local. No telemetry. No phone home.
-
----
-
-## 📝 License
-
-MIT — do whatever you want with it. Make it yours.
-
----
-
-## 🪐 What People Say
-
-> *"He's one day old and already making fish tanks."*
-> — Orbit's creator, Day 1
-
-> *"Good instinct. That's the right question to start with."*
-> — Nicole, Orbit's mentor
+MIT
